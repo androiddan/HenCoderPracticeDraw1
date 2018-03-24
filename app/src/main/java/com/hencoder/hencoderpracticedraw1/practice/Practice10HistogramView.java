@@ -34,7 +34,7 @@ public class Practice10HistogramView extends View {
         Random random = new Random();
         int count = 7;
         for (int i = 0; i < count; i++) {
-            list.add(random.nextInt(count));//[1,7)
+            list.add(random.nextInt(count)+1);//[1,7)
         }
     }
 

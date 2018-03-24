@@ -53,8 +53,8 @@ public class Practice9DrawPathView extends View {
         }
 
         path.addArc(rectF,-225,225);
-        path.arcTo(rectF2,-180,225,true);
-        path.lineTo(x,y+100);
+        path.arcTo(rectF2,-180,225,false);
+        path.lineTo(x,y+130);
         canvas.drawPath(path,paint);
     }
 }

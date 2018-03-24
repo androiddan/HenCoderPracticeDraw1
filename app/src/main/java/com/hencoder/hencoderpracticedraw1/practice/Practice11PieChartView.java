@@ -68,8 +68,8 @@ public class Practice11PieChartView extends View {
 
         titlePaint = new Paint();
         titlePaint.setAntiAlias(true);
-        textPaint.setTextSize(36);
-        textPaint.setColor(Color.WHITE);
+        titlePaint.setTextSize(36);
+        titlePaint.setColor(Color.WHITE);
     }
 
     @Override
@@ -141,6 +141,11 @@ public class Practice11PieChartView extends View {
             drawLineAndText(canvas, text, halfAngel, pointStartX, pointStartY, pointStopX, pointStopY);
             canvas.drawArc(rectF, startAngle, sweepAngle, true, paint);
         }
+
+        //画title
+        String title="饼图";
+        float titleSize=titlePaint.measureText(title);
+        canvas.drawText(title,x-titleSize/2,height-10,titlePaint);
     }
 
     private void drawLineAndText(Canvas canvas, String text, float halfAngel, float startX,
